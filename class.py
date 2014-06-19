@@ -3,7 +3,7 @@ class Calculator:
 		self.x=x
 		self.y=y
 	
-	def add(x,y):
+	def add(self,x,y):
 		return x+y
 	def sub(x,y):
 		return x-y
