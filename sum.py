@@ -4,7 +4,7 @@ print ("2.-")
 print ("3.*")
 print ("4./")
 
-choice =input ("enter choice:")
+choice =input ("enter choice")
 num1= int(input("enter the first operand:"))
 num2= int(input("enter the second operand:"))
 
