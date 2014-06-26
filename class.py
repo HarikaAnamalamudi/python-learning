@@ -18,7 +18,7 @@ print("2.-")
 print("3.*")
 print("4./")
 choice=input("enter choice:")
-num1 = int(input("enter the first operand:"))
+num1 = int(input("enter the first operand"))
 num2 = int(input("enter the second operand:"))
 if choice=='1':
 	print(num1,"+",num2,"=",c.add(num1,num2))
