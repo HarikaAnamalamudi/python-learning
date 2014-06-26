@@ -18,8 +18,10 @@ class Calculator2:
 	def __init__(self):
 		print ("Initialized calculator engine")
 	def add(self, x, y):
+		print ("adding %d and %d" % (x, y))
 		return x+y
 	def sub(self, x, y):
+		print ("subtracting %s and %s" % (str(x), str(y)))
 		return x - y
 	def mul(self, x, y):
 		return x*y
