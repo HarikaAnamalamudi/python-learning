@@ -11,8 +11,8 @@ class Calculator:
 		return x*y
 	def div(self,x,y):
 		return x/y
-c= Calculator()
-print ("choose the operation:")
+c = Calculator()
+print ("choose an operation:")
 print("1.+")
 print("2.-")
 print("3.*")
