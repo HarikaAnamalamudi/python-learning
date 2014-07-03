@@ -1,5 +1,4 @@
 class Calculator():
-	number_types=(int,float)
 	def _init(self,x,y):
 		self.x=x
 		self.y=y
@@ -10,16 +9,19 @@ class Calculator():
 		else:
 			raise ValueError
 	def sub(self,x,y):
+		number_types=(int,float)
 		if isinstance(x,number_types) and isinstance(y,number_types):
 			return x-y
 		else:
 			raise ValueError
 	def mul(self,x,y):
+		number_types=(int,float)
 		if isinstance(x,number_types) and isinstance(y,number_types):
 			return x*y
 		else:
 			raise ValueError
 	def div(self,x,y):
+		number_types=(int,float)
 		if isinstance(x,number_types) and isinstance(y,number_types):
 			return x/y
 		else:
