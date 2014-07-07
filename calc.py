@@ -21,4 +21,4 @@ elif sys.argv[2][0]=='/':
 	result=eval(sys.argv[1])/eval(sys.argv[3])
 
 #display result
-print(sys.argv[1]+''+sys.argv[2]+''+sys.argv[3]+''+str(result))
+print(sys.argv[1]+''+sys.argv[2]+''+sys.argv[3]+''+'='+str(result))
