@@ -29,7 +29,7 @@ except KeyError:
 
 qUtils.log_info("Running tests for host: %s" % host)
 
-class TestRegisterOffice(QtipMeApiTestCase):
+class TestGetOffices(QtipMeApiTestCase):
     data = {}
     data['lat'] = "50.34"
     data['long'] = "34.75"
@@ -43,7 +43,7 @@ class TestRegisterOffice(QtipMeApiTestCase):
     def setUp(self):
         QtipMeApiTestCase.setUp(self)
         self.fmsg = "Testcase %s failed" % self.tcname
-        self.API = QtipMeApi("register/office.php", host, False)
+        self.API = QtipMeApi("client/getoffices.php", host, False)
         self.testdata = self.data.copy()
         self.testdata['form_key'] = qUtils.generateFormKey()
 
@@ -78,18 +78,11 @@ class TestRegisterOffice(QtipMeApiTestCase):
 
     def runTestScenario(self, apiReturnToFmsg=True):
         self.API.addParams(**self.testdata)
-        self.API.performPostRequest()
+        self.API.performGetRequest(is_read=True)
         self.response = self.API.getJsonResponse()
         self.fmsg = "%s [%s]" % (self.fmsg, str(self.response)) if apiReturnToFmsg else self.fmsg
 
-    def invalidateTestData(self, **kwargs):
-        data = []
-        msg1 = "Registration succeeded with invalid test data"
-        for k, v in kwargs.iteritems():
-            self.testdata[k] = v
-            msg2 = "%s: %s" % (k, v)
-            data.append(msg2)
-        self.fmsg = "%s (%s)" % (msg1, ", ".join(data))
+    
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
